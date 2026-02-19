@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: white;
+    text-align: center;
+}
+
+header {
+    padding: 30px;
+}
+
+.btn-voltar {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #00c853;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn-voltar:hover {
+    background: #009624;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.item img,
+.item video {
+    width: 100%;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.item img:hover,
+.item video:hover {
+    transform: scale(1.05);
+}

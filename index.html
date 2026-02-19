@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Fábrica de Barcos de Alumínio | Alto Paraíso - PR</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- SEO -->
+  <meta name="description" content="Fábrica de barcos de alumínio em Alto Paraíso - PR. Produção manual e industrial, controle de qualidade rigoroso e modelos para todo o Brasil.">
+  <meta name="keywords" content="barcos de alumínio, fábrica de barcos, barcos artesanais, barcos industriais, Alto Paraíso PR">
+  <meta name="author" content="Fábrica de Barcos de Alumínio">
+
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <script>
+function enviarWhatsApp(e) {
+  e.preventDefault();
+
+  const nome = document.getElementById("nome").value;
+  const telefone = document.getElementById("telefone").value;
+  const modelo = document.getElementById("modelo").value;
+  const mensagem = document.getElementById("mensagem").value;
+
+  const texto = `
+Olá! Gostaria de um orçamento:
+
+Nome: ${nome}
+Telefone: ${telefone}
+Modelo: ${modelo}
+Detalhes: ${mensagem}
+`;
+
+  const url = `https://wa.me/5599999999999?text=${encodeURIComponent(texto)}`;
+  window.open(url, "_blank");
+}
+</script>
+
+
+</head>
+
+<body> 
+<header>
+<div class="card">
+    <img src="/img/logo-paraiso10.png" 
+         alt="Paraíso Náutica" 
+         id="logo">
+
+    <p class="descricao">
+        Fabricação e Manutenção de Lanchas, barcos, chatas e semi-chatas em alumínio.
+    </p>
+
+    <div class="orcamento">
+        Peça orçamento sem compromisso
+    </div>
+
+    
+</div>
+
+<script src="script.js"></script>
+</header>
+
+<section>
+  <h2>Quem Somos</h2>
+  <p>
+    Somos uma fábrica especializada na construção de barcos de alumínio,
+    unindo processos artesanais com tecnologia industrial moderna.
+    Cada embarcação é projetada para oferecer resistência, segurança e alto desempenho.
+  </p>
+
+  <img src="img/FB_IMG_14.jpg" alt="Fábrica de barcos">
+</section>
+
+<section>
+  <h2>Processo de Fabricação</h2>
+
+  <div class="grid">
+    <div class="card" onclick="toggleContent(this)">
+      <i class="fas fa-hammer"></i>
+      <h3>Fabricação Manual</h3>
+      <div class="hidden-content">
+        Produção artesanal com atenção total aos detalhes,
+        garantindo acabamento superior e personalização.
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleContent(this)">
+      <i class="fas fa-industry"></i>
+      <h3>Produção Industrial</h3>
+      <div class="hidden-content">
+        Processos industriais modernos para alta escala,
+        mantendo padrão rigoroso de qualidade.
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleContent(this)">
+      <i class="fas fa-check-circle"></i>
+      <h3>Controle de Qualidade</h3>
+      <div class="hidden-content">
+        Testes estruturais, inspeções técnicas e revisão completa
+        antes da entrega de cada embarcação.
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleContent(this)">
+      <i class="fas fa-lightbulb"></i>
+      <h3>Inovação & Novidades</h3>
+      <div class="hidden-content">
+        Desenvolvimento contínuo de novos modelos,
+        melhorias estruturais e design moderno.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Vídeos do Processo</h2>
+
+  <video controls poster="img/FB_IMG_19.jpg">
+    <source src="video-fabricacao-exemplo.mp4" type="video/mp4">
+    Seu navegador não suporta vídeo.
+  </video>
+
+  <p style="margin-top: 15px;">
+    Vídeos ilustrativos do processo de soldagem, montagem e acabamento
+    (substitua pelo material real da fábrica).
+  </p>
+</section>
+
+<section id="modelos">
+  <h2>Modelos de Barcos</h2>
+
+  <div class="grid">
+    <div class="card">
+      <img 
+        src="img/FB_IMG_7.jpg"
+        alt="Barco de Alumínio Modelo Leve"
+        loading="lazy"
+      >
+      <h3>Modelo Leve</h3>
+      <p>Ideal para pesca e lazer.</p>
+
+      <a href="modelo-leve.html" class="btn-modelo">
+        Ver Modelo
+      </a>
+    </div>
+
+    <div class="card">
+      <img 
+        src="img/FB_IMG_1.jpg"
+        alt="Barco de Alumínio Modelo Reforçado"
+        loading="lazy"
+      >
+      <h3>Modelo Reforçado</h3>
+      <p>Alta resistência para rios e represas.</p>
+
+      <a href="modelo-reforcado.html" class="btn-modelo">
+        Ver Modelo
+      </a>
+    </div>
+
+    <div class="card">
+      <img 
+        src="img/FB_IMG_24.jpg"
+        alt="Projeto Especial de Barco de Alumínio"
+        loading="lazy"
+      >
+      <h3>Projeto Especial</h3>
+      <p>Personalizado sob medida.</p>
+
+      <a href="projeto-especial.html" class="btn-modelo">
+        Ver Modelo
+      </a>
+    </div>
+  </div>
+</section>
+
+</section>
+<section id="form-orcamento">
+  <h2>Formulário de Orçamento</h2>
+
+  <form onsubmit="enviarWhatsApp(event)">
+    <input type="text" id="nome" placeholder="Nome completo" required>
+    <input type="tel" id="telefone" placeholder="Telefone / WhatsApp" required>
+
+    <select id="modelo">
+      <option value="">Modelo de interesse</option>
+      <option>Barco Leve</option>
+      <option>Barco Reforçado</option>
+      <option>Projeto Personalizado</option>
+    </select>
+
+    <textarea
+      id="mensagem"
+      placeholder="Descreva sua necessidade (uso, tamanho, região, etc.)"
+      required
+    ></textarea>
+
+    <button type="submit">Enviar Orçamento</button>
+  </form>
+</section>
+
+
+<a
+  href="https://wa.me/5544991111171?text=Olá!%20Gostaria%20de%20um%20orçamento%20para%20barcos%20de%20alumínio."
+  class="whatsapp-float"
+  target="_blank"
+  aria-label="Solicitar orçamento via WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+
+<section>
+  <h2>Atendemos Todo o Brasil</h2>
+  <p>
+    Nossa fábrica está localizada em <strong>Alto Paraíso - PR</strong>,
+    com logística preparada para atender clientes em todas as regiões do país.
+  </p>
+</section>
+
+<section class="cta-orcamento">
+  <h2>Solicite um Orçamento Personalizado</h2>
+  <p>
+    Entre em contato com nossa equipe e receba um orçamento sob medida.
+    Produção manual ou industrial, com entrega para todo o Brasil.
+  </p>
+
+  <div class="cta-buttons">
+    <a href="#form-orcamento" class="btn-cta">Solicitar Orçamento</a>
+
+    <a
+      href="https://wa.me/5599999999999?text=Olá!%20Quero%20um%20orçamento%20para%20barcos%20de%20alumínio."
+      target="_blank"
+      class="btn-cta whatsapp"
+    >
+      WhatsApp Direto
+    </a>
+  </div>
+</section>
+
+
+<footer>
+  <div class="contato">
+        <span class="icone">📞</span>
+        <span class="telefone">44 99172-6015</span>
+    </div>
+
+    <div class="endereco">
+        Rua Josue B. Rodrigues, 652<br>
+        Parque Industrial - Alto Paraíso - PR
+    </div>
+</div>
+</footer>
+
+<script>
+  function toggleContent(card) {
+    const content = card.querySelector('.hidden-content');
+    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+
+</body>
+</html>
