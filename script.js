@@ -37,3 +37,43 @@ document.addEventListener("mouseup", () => {
         }, 600);
     }
 });
+document.addEventListener("DOMContentLoaded", function() {
+    const buttons = document.querySelector(".social-float");
+    buttons.style.opacity = "0";
+    buttons.style.transition = "opacity 1s ease";
+
+    setTimeout(() => {
+        buttons.style.opacity = "1";
+    }, 500);
+});
+
+// Toggle otimizado
+document.querySelectorAll(".toggle-card").forEach(card => {
+  card.addEventListener("click", () => {
+    const content = card.querySelector(".hidden-content");
+    content.classList.toggle("active");
+  });
+});
+
+// WhatsApp formulário
+const form = document.getElementById("orcamentoForm");
+
+if(form){
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const nome = nome.value;
+    const telefone = telefone.value;
+    const modelo = modelo.value;
+    const mensagem = mensagem.value;
+
+    const texto = `Olá! Gostaria de um orçamento:
+Nome: ${nome}
+Telefone: ${telefone}
+Modelo: ${modelo}
+Detalhes: ${mensagem}`;
+
+    const url = `https://wa.me/5544991111171?text=${encodeURIComponent(texto)}`;
+    window.open(url, "_blank");
+  });
+}

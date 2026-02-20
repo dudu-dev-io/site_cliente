@@ -2,63 +2,75 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Galeria | Seu Site</title>
+    <title>Galeria de Eventos | Paraíso Náutica</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galeria de eventos, entregas e clientes da Paraíso Náutica.">
 
     <link rel="stylesheet" href="galeria.css">
 </head>
 <body>
 
-    <header>
-        <h1>📸 Galeria de Fotos & Vídeos</h1>
+<header class="topo">
+    <div class="container">
+        <h1>Galeria de Eventos & Clientes</h1>
         <a href="index.html" class="btn-voltar">⬅ Voltar para Home</a>
-    </header>
+    </div>
+</header>
 
-    <section class="galeria">
+<main>
+    <section class="galeria container">
 
-        <!-- FOTO -->
+        <!-- FOTOS -->
         <div class="item">
-            <img src="img/FB_IMG_24.jpg" alt="Foto 1">
+            <img src="img/FB_IMG_24.jpg" alt="Evento náutico com barco modelo 24">
         </div>
 
         <div class="item">
-            <img src="img/FB_IMG_25.jpg" alt="Foto 2">
-        </div> 
-         <div class="item">
-            <img src="img/FB_IMG_28.jpg" alt="Foto 2">
+            <img src="img/FB_IMG_25.jpg" alt="Cliente recebendo barco personalizado">
         </div>
-         <div class="item">
-            <img src="img/FB_IMG_29.jpg" alt="Foto 2">
-        </div>
-         <div class="item">
-            <img src="img/FB_IMG_40.jpg" alt="Foto 2">
-        </div>
-         <div class="item">
-            <img src="img/FB_IMG_43.jpg" alt="Foto 2">
-        </div>
-         <div class="item">
-            <img src="img/FB_IMG_02.jpg" alt="Foto 2">
-        </div>
-         <div class="item">
-            <img src="img/FB_IMG_03.jpg" alt="Foto 2">
-        </div>
-    
-        <!-- VIDEO -->
+
         <div class="item">
-            <video controls>
+            <img src="img/FB_IMG_28.jpg" alt="Barco em exposição em evento">
+        </div>
+
+        <div class="item">
+            <img src="img/FB_IMG_29.jpg" alt="Apresentação de barco de alumínio">
+        </div>
+
+        <div class="item">
+            <img src="img/FB_IMG_40.jpg" alt="Cliente satisfeito com barco novo">
+        </div>
+
+        <div class="item">
+            <img src="img/FB_IMG_43.jpg" alt="Entrega oficial de embarcação">
+        </div>
+
+        <div class="item">
+            <img src="img/FB_IMG_02.jpg" alt="Barco navegando em rio">
+        </div>
+
+        <div class="item">
+            <img src="img/FB_IMG_03.jpg" alt="Detalhes internos do barco">
+        </div>
+
+        <!-- VÍDEOS -->
+        <div class="item">
+            <video controls preload="metadata">
                 <source src="videos/video1.mp4" type="video/mp4">
                 Seu navegador não suporta vídeo.
             </video>
         </div>
 
         <div class="item">
-            <video controls>
+            <video controls preload="metadata">
                 <source src="videos/video2.mp4" type="video/mp4">
                 Seu navegador não suporta vídeo.
             </video>
         </div>
 
     </section>
+</main>
+
 
 </body>
 </html>

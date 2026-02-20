@@ -1,3 +1,6 @@
+/* =========================
+   RESET
+========================= */
 * {
     margin: 0;
     padding: 0;
@@ -5,46 +8,111 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #111;
-    color: white;
-    text-align: center;
+    font-family: "Inter", Arial, sans-serif;
+    background: #0c1117;
+    color: #ffffff;
+    line-height: 1.6;
 }
 
-header {
-    padding: 30px;
+/* =========================
+   CONTAINER
+========================= */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* =========================
+   HEADER
+========================= */
+.topo {
+    background: linear-gradient(135deg, #001018, #0f1f2e);
+    padding: 60px 0;
+    text-align: center;
+    border-bottom: 3px solid #00cfff;
+}
+
+.topo h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #00cfff;
 }
 
 .btn-voltar {
     display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background: #00c853;
-    color: white;
+    padding: 12px 25px;
+    background: #00cfff;
+    color: #001018;
+    font-weight: bold;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 40px;
     transition: 0.3s;
 }
 
 .btn-voltar:hover {
-    background: #009624;
+    background: #007cff;
+    color: #fff;
 }
 
+/* =========================
+   GALERIA GRID
+========================= */
 .galeria {
+    padding: 70px 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
 }
 
+/* =========================
+   ITENS
+========================= */
+.item {
+    background: #141a22;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0, 207, 255, 0.2);
+}
+
+/* =========================
+   IMAGENS E VÍDEOS
+========================= */
 .item img,
 .item video {
     width: 100%;
-    border-radius: 12px;
-    transition: 0.3s;
+    height: 100%;
+    display: block;
+    object-fit: cover;
 }
 
-.item img:hover,
-.item video:hover {
-    transform: scale(1.05);
+/* =========================
+   FOOTER
+========================= */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #06090d;
+    font-size: 0.9rem;
+    color: #aaa;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+@media (max-width: 768px) {
+    .topo h1 {
+        font-size: 1.8rem;
+    }
+
+    .galeria {
+        gap: 18px;
+    }
 }
