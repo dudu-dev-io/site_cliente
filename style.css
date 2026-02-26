@@ -10,6 +10,7 @@
   --text-light: #e6e6e6;
   --text-muted: #bfc5cc;
   --whatsapp: #25D366;
+  --text-white: #ffffff;
 }
 
 /* ==========================
@@ -25,11 +26,35 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ==========================
+   BACKGROUND ANIMADO AZUL
+========================== */
 body {
-  font-family: "Inter", "Segoe UI", Arial, sans-serif;
-  background: var(--bg-dark);
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
   color: var(--text-light);
-  line-height: 1.6;
+
+  background: linear-gradient(
+    -45deg,
+    #001f3f,
+    #003f88,
+    #00509d,
+    #0077b6,
+    #0096c7,
+    #00b4d8
+  );
+
+  background-size: 400% 400%;
+  animation: gradientMove 20s ease-in-out infinite;
+}
+
+/* Animação suave */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 50% 100%; }
+  50% { background-position: 100% 50%; }
+  75% { background-position: 50% 0%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* ==========================
@@ -49,8 +74,10 @@ h1 {
 h2 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  color: var(--primary);
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(0, 207, 255, 0.5);
 }
+
 
 h3 {
   font-size: 1.2rem;
@@ -59,7 +86,7 @@ h3 {
 
 p {
   font-size: 1rem;
-  color: #cfd3d8;
+  color: var(--text-muted);
 }
 
 /* ==========================
@@ -87,16 +114,21 @@ header::after {
 }
 
 /* ==========================
-   SEÇÕES
+   SEÇÕES - ESTILO VIDRO NÁUTICO
 ========================== */
-section {
+main section {
   max-width: 1200px;
-  margin: auto;
+  margin: 40px auto;
   padding: 80px 25px;
-}
 
-section:nth-child(even) {
-  background: linear-gradient(180deg, var(--bg-section), #0b0f14);
+  background: rgba(0, 16, 30, 0.55);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+
+  border-radius: 18px;
+  border: 1px solid rgba(0, 207, 255, 0.15);
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
 }
 
 /* ==========================
@@ -109,25 +141,24 @@ section:nth-child(even) {
 }
 
 /* ==========================
-   CARDS
+   CARDS - GLASS NÁUTICO PREMIUM
 ========================== */
 .card {
-  background: linear-gradient(160deg, var(--card-bg), #0e131a);
+  background: rgba(10, 25, 45, 0.65);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+
   padding: 25px;
-  border-radius: 12px;
-  border: 1px solid rgba(0, 207, 255, 0.1);
+  border-radius: 16px;
+
+  border: 1px solid rgba(0, 207, 255, 0.2);
+
   transition: transform .3s ease, box-shadow .3s ease;
 }
 
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 15px 35px rgba(0, 207, 255, .15);
-}
-
-.card i {
-  font-size: 2.3rem;
-  color: var(--primary);
-  margin-bottom: 12px;
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 207, 255, 0.35);
 }
 
 /* ==========================
@@ -158,7 +189,7 @@ img {
 }
 
 /* ==========================
-   VÍDEO RESPONSIVO
+   VÍDEO
 ========================== */
 video {
   width: 100%;
@@ -172,7 +203,9 @@ video {
 /* ==========================
    BOTÕES
 ========================== */
-button, .btn-cta, .btn-modelo {
+button,
+.btn-cta,
+.btn-modelo {
   transition: all .3s ease;
   cursor: pointer;
 }
@@ -188,6 +221,7 @@ button {
 
 button:hover {
   transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 207, 255, .4);
 }
 
 .btn-modelo {
@@ -215,7 +249,9 @@ form {
   gap: 15px;
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
   padding: 14px;
   border-radius: 8px;
   border: none;
@@ -259,30 +295,6 @@ textarea {
 }
 
 /* ==========================
-   WHATSAPP FLOAT
-========================== */
-.whatsapp-float {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(135deg, var(--whatsapp), #1ebe57);
-  color: #fff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  box-shadow: 0 10px 25px rgba(0,0,0,.4);
-  z-index: 999;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.1);
-}
-
-/* ==========================
    BOTÕES FLUTUANTES
 ========================== */
 .social-float {
@@ -306,6 +318,7 @@ textarea {
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  transition: transform .3s ease;
 }
 
 .float-btn:hover {
@@ -351,7 +364,7 @@ footer {
   h2 { font-size: 1.6rem; }
 
   header { padding: 80px 15px; }
-  section { padding: 60px 20px; }
+  main section { padding: 60px 20px; }
 
   .social-float {
     right: 10px;
