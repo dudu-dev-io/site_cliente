@@ -77,3 +77,37 @@ Detalhes: ${mensagem}`;
     window.open(url, "_blank");
   });
 }
+
+const slider = document.querySelector(".slider");
+const images = document.querySelectorAll(".slider img");
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
+
+let index = 0;
+let totalImages = images.length;
+
+function updateSlider() {
+  slider.style.transform = `translateX(-${index * 100}%)`;
+}
+
+function nextSlide() {
+  index++;
+  if (index >= totalImages) {
+    index = 0;
+  }
+  updateSlider();
+}
+
+function prevSlide() {
+  index--;
+  if (index < 0) {
+    index = totalImages - 1;
+  }
+  updateSlider();
+}
+
+nextBtn.addEventListener("click", nextSlide);
+prevBtn.addEventListener("click", prevSlide);
+
+/* Slide automático */
+setInterval(nextSlide, 4000);

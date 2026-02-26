@@ -370,3 +370,60 @@ footer {
     right: 10px;
   }
 }
+
+/* ==========================
+   SLIDER QUEM SOMOS
+========================== */
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  margin-top: 30px;
+  border-radius: 16px;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.slider img {
+  min-width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* Botões laterais */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 207, 255, 0.8);
+  border: none;
+  color: #001018;
+  font-size: 30px;
+  padding: 10px 18px;
+  cursor: pointer;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.slider-btn:hover {
+  background: #00cfff;
+}
+
+.prev {
+  left: 15px;
+}
+
+.next {
+  right: 15px;
+}
+
+/* Mostrar botões ao passar o mouse */
+.slider-container:hover .slider-btn {
+  opacity: 1;
+}
