@@ -111,3 +111,13 @@ prevBtn.addEventListener("click", prevSlide);
 
 /* Slide automático */
 setInterval(nextSlide, 4000);
+
+/* ==========================
+   INSTAGRAM LOAD FIX
+========================== */
+
+document.addEventListener("DOMContentLoaded", function() {
+  if (window.instgrm) {
+    window.instgrm.Embeds.process();
+  }
+});
