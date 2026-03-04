@@ -121,3 +121,31 @@ document.addEventListener("DOMContentLoaded", function() {
     window.instgrm.Embeds.process();
   }
 });
+
+document.getElementById("orcamentoForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const nome = document.getElementById("nome").value;
+  const telefone = document.getElementById("telefone").value;
+  const modelo = document.getElementById("modelo").value;
+  const mensagem = document.getElementById("mensagem").value;
+  const aceite = document.getElementById("aceite").checked;
+
+  if (!aceite) {
+    alert("Você precisa aceitar os Termos para continuar.");
+    return;
+  }
+
+  const numeroWhatsApp = "5544991111171";
+
+  const texto = `Olá, me chamo ${nome}.
+Telefone: ${telefone}
+Modelo de interesse: ${modelo}
+
+Mensagem:
+${mensagem}`;
+
+  const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(texto)}`;
+
+  window.open(url, "_blank");
+});

@@ -181,10 +181,12 @@
   <h2>Formulário de Orçamento</h2>
 
   <form id="orcamentoForm">
+
     <input type="text" id="nome" placeholder="Nome completo" required>
+
     <input type="tel" id="telefone" placeholder="Telefone / WhatsApp" required>
 
-    <select id="modelo" title="Selecione o modelo de barco de interesse" required>
+    <select id="modelo" title="Selecione o modelo de barco de seu interesse" required>
       <option value="">Modelo de interesse</option>
       <option>Barco Leve</option>
       <option>Barco Reforçado</option>
@@ -195,12 +197,18 @@
       placeholder="Descreva sua necessidade"
       required></textarea>
 
-      <label style="font-size:14px;">
-  <input type="checkbox" required>
-  Li e concordo com a <a href="politica-privacidade.html" target="_blank">Política de Privacidade</a>
-</label>
+    <!-- Caixa LGPD -->
+    <div class="termos-box">
+      <input type="checkbox" id="aceite" required>
+      <label for="aceite">
+        Li e aceito os 
+        <a href="termos-de-uso.html" target="_blank">Termos de Uso</a> e a 
+        <a href="politica-de-privacidade.html" target="_blank">Política de Privacidade</a>
+      </label>
+    </div>
 
     <button type="submit">Enviar Orçamento</button>
+
   </form>
 </section>
 
@@ -246,9 +254,9 @@
     </a>
   </div>
 
-  <div style="margin-top:15px;">
-  <a href="politica-privacidade.html">Política de Privacidade</a> |
-  <a href="termos-de-uso.html">Termos de Uso</a>
+  <div class="footer-links">
+  <a href="termos-de-uso.html">Termos de Uso</a> |
+  <a href="politica-de-privacidade.html">Política de Privacidade</a>
 </div>
   
 </footer>
